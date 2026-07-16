@@ -10,6 +10,9 @@ const CartIcon = dynamic(() => import('./CartIcon'), { ssr: false });
 export default function HeaderUtilities() {
   return (
     <div className='flex items-center gap-1 sm:gap-2'>
+      <div className='hidden md:block'>
+        <SearchBar />
+      </div>
       <ThemeToggle />
       <CartIcon />
     </div>

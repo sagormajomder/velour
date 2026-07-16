@@ -2,6 +2,7 @@ import { BRAND_NAME, NAV_LINKS } from '@src/lib/constants';
 import Link from 'next/link';
 import Container from './Container';
 import HeaderUtilities from './HeaderUtilities';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
   return (
@@ -9,6 +10,7 @@ export default function Header() {
       <Container className='flex h-16 items-center justify-between'>
         {/* Left Side: Mobile Menu Trigger + Brand Logo */}
         <div className='flex items-center gap-2'>
+          <MobileMenu />
           <Link
             href='/'
             className='font-heading text-xl sm:text-2xl font-bold tracking-widest text-primary hover:opacity-90 transition-opacity'>

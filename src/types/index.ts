@@ -43,3 +43,12 @@ export type ProductColor =
   | 'Sage';
 
 export type ProductSize = 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'Free Size';
+export interface SocialLink {
+  name: string;
+  href: string;
+}
+
+export type NavLink = {
+  label: string;
+  href: string;
+};

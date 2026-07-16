@@ -1,6 +1,7 @@
 import Footer from '@src/components/layouts/Footer';
 import Header from '@src/components/layouts/Header';
 import Main from '@src/components/layouts/Main';
+import { cn } from '@src/lib/utils';
 import type { Metadata } from 'next';
 import { Geist_Mono, Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
@@ -55,8 +56,13 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={`${playfair.variable} ${inter.variable} ${geistMono.variable} antialiased scroll-smooth`}>
-      <body className='bg-bg text-text font-body grid grid-rows-[auto_1fr_auto] min-h-screen'>
+      className={cn(
+        playfair.variable,
+        inter.variable,
+        geistMono.variable,
+        'antialiased',
+      )}>
+      <body className='grid min-h-screen grid-rows-[auto_1fr_auto]'>
         <Header />
         <Main>{children}</Main>
         <Footer />

@@ -1,6 +1,7 @@
 import Footer from '@src/components/layouts/Footer';
 import Header from '@src/components/layouts/Header';
 import Main from '@src/components/layouts/Main';
+import { ThemeProvider } from '@src/context/ThemeContext';
 import { cn } from '@src/lib/utils';
 import type { Metadata } from 'next';
 import { Geist_Mono, Inter, Playfair_Display } from 'next/font/google';
@@ -64,9 +65,11 @@ export default function RootLayout({
         'antialiased',
       )}>
       <body className='grid min-h-screen grid-rows-[auto_1fr_auto]'>
-        <Header />
-        <Main>{children}</Main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

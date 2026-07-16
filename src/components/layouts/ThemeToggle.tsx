@@ -3,15 +3,16 @@
 import { MoonIcon, Sun01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Button } from '@src/components/ui/button';
+import { useTheme } from '@src/context/ThemeContext';
 
 export default function ThemeToggle() {
-  const theme = 'light';
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <Button
       variant='ghost'
       size='icon'
-      onClick={() => {}}
+      onClick={toggleTheme}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       className='text-foreground/80 hover:text-foreground hover:bg-secondary/50 dark:hover:bg-secondary/20 rounded-full transition-all duration-300'>
       <HugeiconsIcon

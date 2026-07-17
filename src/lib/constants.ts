@@ -37,3 +37,7 @@ export const COLOR_HEX_MAP: Record<ProductColor, string> = {
   Charcoal: '#374151',
   Sage: '#87a987',
 };
+
+export const SHIPPING_THRESHOLD = 5000;
+export const SHIPPING_COST = 120;
+

@@ -1,7 +1,7 @@
 'use client';
 
 import { useCart } from '@src/context/CartContext';
-import { formatPrice } from '@src/lib/utils';
+import { formatPrice, calculateDiscount } from '@src/lib/utils';
 import { Product, ProductSize } from '@src/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,10 +30,8 @@ export default function ProductCard({
   const { id, name, slug, price, originalPrice, image, sizes, inStock, isNew } =
     product;
 
-  // Calculate discount percentage
-  const discount = originalPrice
-    ? Math.round(((originalPrice - price) / originalPrice) * 100)
-    : 0;
+  // Calculate discount percentage using the shared utility helper
+  const discount = calculateDiscount(price, originalPrice);
 
   const handleQuickAdd = (size: ProductSize, e: React.MouseEvent) => {
     e.preventDefault();

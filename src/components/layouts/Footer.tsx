@@ -72,7 +72,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {BRAND_NAME} Store. All rights
             reserved.
           </p>
-          <div className='flex gap-6 font-mono'>
+          {/* <div className='flex gap-6 font-mono'>
             <Link
               href='/privacy'
               className='hover:text-accent transition-colors'>
@@ -81,7 +81,7 @@ export default function Footer() {
             <Link href='/terms' className='hover:text-accent transition-colors'>
               Terms of Service
             </Link>
-          </div>
+          </div> */}
         </Container>
       </div>
     </footer>

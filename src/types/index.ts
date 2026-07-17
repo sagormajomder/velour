@@ -52,3 +52,43 @@ export type NavLink = {
   label: string;
   href: string;
 };
+
+export type CartItem = {
+  productId: number;
+  selectedColor: ProductColor;
+  selectedSize: ProductSize;
+  quantity: number;
+};
+
+export type CartState = {
+  items: CartItem[];
+};
+
+export type CartAction =
+  | { type: 'ADD_ITEM'; payload: CartItem }
+  | {
+      type: 'REMOVE_ITEM';
+      payload: {
+        productId: number;
+        selectedColor: ProductColor;
+        selectedSize: ProductSize;
+      };
+    }
+  | {
+      type: 'UPDATE_QUANTITY';
+      payload: {
+        productId: number;
+        selectedColor: ProductColor;
+        selectedSize: ProductSize;
+        quantity: number;
+      };
+    }
+  | { type: 'CLEAR_CART' };
+
+export type SortOption =
+  | 'default'
+  | 'price-asc'
+  | 'price-desc'
+  | 'name-asc'
+  | 'name-desc'
+  | 'rating-desc';

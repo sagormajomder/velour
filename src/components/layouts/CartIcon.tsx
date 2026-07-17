@@ -5,9 +5,10 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { buttonVariants } from '@src/components/ui/button';
 import { cn } from '@src/lib/utils';
 import Link from 'next/link';
+import { useCart } from '@src/context/CartContext';
 
 export default function CartIcon() {
-  const cartCount = 0;
+  const { cartCount } = useCart();
 
   return (
     <Link
@@ -26,3 +27,4 @@ export default function CartIcon() {
     </Link>
   );
 }
+

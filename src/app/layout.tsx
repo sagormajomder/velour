@@ -2,6 +2,8 @@ import Footer from '@src/components/layouts/Footer';
 import Header from '@src/components/layouts/Header';
 import Main from '@src/components/layouts/Main';
 import { ThemeProvider } from '@src/context/ThemeContext';
+import { CartProvider } from '@src/context/CartContext';
+import { Toaster } from 'sonner';
 import { cn } from '@src/lib/utils';
 import type { Metadata } from 'next';
 import { Geist_Mono, Inter, Playfair_Display } from 'next/font/google';
@@ -66,11 +68,18 @@ export default function RootLayout({
       )}>
       <body className='grid min-h-screen grid-rows-[auto_1fr_auto]'>
         <ThemeProvider>
-          <Header />
-          <Main>{children}</Main>
-          <Footer />
+          <CartProvider>
+            <Header />
+            <Main>{children}</Main>
+            <Footer />
+            <Toaster position='bottom-right' closeButton />
+          </CartProvider>
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
+
+
+

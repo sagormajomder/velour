@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   return (
-    <main className='w-full py-12 sm:py-16 bg-background transition-colors duration-300'>
+    <main className='w-full py-16 sm:py-24 bg-background transition-colors duration-300'>
       <Container className='flex flex-col gap-10 sm:gap-14'>
         {/* Page Header */}
         <SectionHeader

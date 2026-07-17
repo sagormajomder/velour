@@ -10,7 +10,7 @@ export function RelatedProducts({ relatedProducts }: RelatedProductsProps) {
   if (relatedProducts.length === 0) return null;
 
   return (
-    <section className='border-t border-border/60 pt-16 md:pt-24'>
+    <section className='pt-16 md:pt-24'>
       <div className='flex flex-col gap-2 mb-8 md:mb-12'>
         <span className='text-xs font-bold tracking-widest text-accent uppercase font-sans'>
           Complete the Look

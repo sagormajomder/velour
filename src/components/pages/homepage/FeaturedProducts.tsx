@@ -3,9 +3,9 @@
 import Container from '@src/components/layouts/Container';
 import ProductCard from '@src/components/products/ProductCard';
 import { Button } from '@src/components/ui/button';
+import { SectionHeader } from '@src/components/ui/SectionHeader';
 import { getFeaturedProducts } from '@src/data/products';
 import Link from 'next/link';
-import { SectionHeader } from '@src/components/ui/SectionHeader';
 
 export function FeaturedProducts() {
   const featuredProducts = getFeaturedProducts(4);

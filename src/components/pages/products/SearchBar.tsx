@@ -16,7 +16,7 @@ export default function SearchBar({
   placeholder = 'Search by product name...',
 }: SearchBarProps) {
   return (
-    <div className='relative w-full max-w-md mx-auto'>
+    <div className='relative w-full max-w-md mx-auto md:mx-0'>
       <div className='relative flex items-center w-full h-11 rounded-full bg-secondary/30 dark:bg-secondary/10 border border-border/50 hover:border-border focus-within:border-accent focus-within:ring-1 focus-within:ring-accent transition-all duration-300'>
         {/* Search Icon */}
         <div className='pl-4 pr-2 text-muted-foreground shrink-0'>

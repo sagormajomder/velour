@@ -11,7 +11,7 @@ export default function Footer() {
         <div className='flex flex-col gap-4'>
           <Link
             href='/'
-            className='font-heading text-2xl font-bold tracking-widest text-primary dark:text-primary-foreground'>
+            className='font-heading text-2xl font-bold tracking-widest text-primary hover:opacity-90 transition-opacity'>
             {BRAND_NAME}
           </Link>
           <p className='text-sm text-muted-foreground max-w-sm leading-relaxed'>

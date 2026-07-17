@@ -49,7 +49,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const discount = calculateDiscount(product.price, product.originalPrice);
 
   return (
-    <div className='bg-background min-h-screen py-8 md:py-16 transition-colors duration-300'>
+    <main className='w-full py-16 sm:py-24 bg-background transition-colors duration-300'>
       <Container>
         {/* Breadcrumb Navigation */}
         <ProductBreadcrumbs category={product.category} name={product.name} />
@@ -104,6 +104,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         {/* Related Products Section*/}
         <RelatedProducts relatedProducts={relatedProducts} />
       </Container>
-    </div>
+    </main>
   );
 }

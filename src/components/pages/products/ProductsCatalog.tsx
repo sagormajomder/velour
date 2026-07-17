@@ -161,7 +161,7 @@ export default function ProductsCatalog() {
         </div>
 
         {/* Sort Controls */}
-        <div className='flex items-center gap-3 shrink-0 w-full md:w-auto justify-end'>
+        <div className='flex items-center gap-3 shrink-0 w-full md:w-auto justify-center md:justify-end'>
           <label
             htmlFor='sort'
             className='text-xs font-semibold uppercase tracking-widest text-muted-foreground whitespace-nowrap'>

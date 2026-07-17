@@ -3,6 +3,7 @@ import Header from '@src/components/layouts/Header';
 import Main from '@src/components/layouts/Main';
 import { ThemeProvider } from '@src/context/ThemeContext';
 import { CartProvider } from '@src/context/CartContext';
+import { PageTransition } from '@src/components/ui/PageTransition';
 import { Toaster } from 'sonner';
 import { cn } from '@src/lib/utils';
 import type { Metadata } from 'next';
@@ -70,7 +71,9 @@ export default function RootLayout({
         <ThemeProvider>
           <CartProvider>
             <Header />
-            <Main>{children}</Main>
+            <Main>
+              <PageTransition>{children}</PageTransition>
+            </Main>
             <Footer />
             <Toaster position='bottom-right' closeButton />
           </CartProvider>

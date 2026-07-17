@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export function CategoryShowcase() {
   return (
-    <section className='w-full py-16 sm:py-24 bg-background transition-colors duration-300'>
+    <section className='w-full pt-5 pb-16 sm:pt-5 sm:pb-24 bg-background transition-colors duration-300'>
       <Container className='flex flex-col gap-10 sm:gap-14'>
         {/* Section Header */}
         <SectionHeader

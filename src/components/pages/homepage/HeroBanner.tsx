@@ -5,7 +5,7 @@ import { HeroText } from './HeroText';
 
 export function HeroBanner() {
   return (
-    <section className='relative w-full min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-zinc-950'>
+    <section className='relative w-full min-h-[70vh] flex items-center overflow-hidden bg-zinc-950'>
       <div className='absolute inset-0 w-full h-full z-0'>
         <HeroImage />
       </div>

@@ -7,6 +7,7 @@ import { cn } from '@src/lib/utils';
 import Link from 'next/link';
 import { useCart } from '@src/context/CartContext';
 import { useIsMounted } from '@src/hooks/useIsMounted';
+import { motion } from 'motion/react';
 
 export default function CartIcon() {
   const { cartCount } = useCart();
@@ -22,9 +23,14 @@ export default function CartIcon() {
       aria-label='View shopping cart'>
       <HugeiconsIcon icon={ShoppingBag01Icon} size={20} strokeWidth={1.5} />
       {mounted && cartCount > 0 && (
-        <span className='absolute top-0.5 right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground font-mono scale-100 transition-all'>
+        <motion.span
+          key={cartCount}
+          initial={{ scale: 0.6 }}
+          animate={{ scale: [0.6, 1.3, 1] }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className='absolute top-0.5 right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent px-1 text-[10px] font-bold text-accent-foreground font-mono'>
           {cartCount}
-        </span>
+        </motion.span>
       )}
     </Link>
   );

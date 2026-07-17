@@ -3,6 +3,7 @@
 import { Cancel01Icon, Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { buttonVariants } from '@src/components/ui/button';
+import { Input } from '@src/components/ui/input';
 import { cn } from '@src/lib/utils';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -82,14 +83,14 @@ export default function SearchBar({ alwaysOpen = false }: { alwaysOpen?: boolean
             className='text-muted-foreground mr-2 shrink-0'
           />
         )}
-        <input
+        <Input
           ref={inputRef}
           type='text'
           value={query}
           onChange={e => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder='Search items...'
-          className='w-full bg-transparent text-sm outline-none text-foreground placeholder:text-muted-foreground'
+          className='border-0 bg-transparent shadow-none focus-visible:ring-0 focus-visible:border-none w-full text-sm text-foreground placeholder:text-muted-foreground h-auto py-0'
         />
         {query && (
           <button

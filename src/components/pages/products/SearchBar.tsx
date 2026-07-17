@@ -2,6 +2,7 @@
 
 import { Cancel01Icon, Search01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
+import { Input } from '@src/components/ui/input';
 
 interface SearchBarProps {
   value: string;
@@ -28,12 +29,12 @@ export default function SearchBar({
         </div>
 
         {/* Search Input */}
-        <input
+        <Input
           type='text'
           value={value}
           onChange={e => onChange(e.target.value)}
           placeholder={placeholder}
-          className='w-full h-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none pr-10 font-sans'
+          className='border-0 bg-transparent shadow-none focus-visible:ring-0 focus-visible:border-none w-full h-full text-sm text-foreground placeholder:text-muted-foreground pr-10 font-sans'
         />
 
         {/* Clear Button */}

@@ -5,6 +5,7 @@ import ProductCard from '@src/components/products/ProductCard';
 import { Button } from '@src/components/ui/button';
 import { getFeaturedProducts } from '@src/data/products';
 import Link from 'next/link';
+import { SectionHeader } from '@src/components/ui/SectionHeader';
 
 export function FeaturedProducts() {
   const featuredProducts = getFeaturedProducts(4);
@@ -13,16 +14,11 @@ export function FeaturedProducts() {
     <section className='w-full py-16 sm:py-24 bg-background transition-colors duration-300'>
       <Container className='flex flex-col gap-10 sm:gap-16'>
         {/* Section Header */}
-        <div className='flex flex-col sm:flex-row sm:items-end justify-between gap-4'>
-          <div className='flex flex-col gap-2'>
-            <span className='text-xs font-bold tracking-widest text-accent uppercase font-sans'>
-              Curated Selection
-            </span>
-            <h2 className='text-3xl sm:text-4xl font-heading font-bold text-foreground'>
-              Most Popular Products
-            </h2>
-          </div>
-        </div>
+        <SectionHeader
+          tagline='Curated Selection'
+          heading='Most Popular Products'
+          description='Explore our most wanted signature styles, chosen by our design experts for their timeless charm.'
+        />
 
         {/* Products Grid */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>

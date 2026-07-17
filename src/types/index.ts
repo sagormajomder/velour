@@ -53,6 +53,13 @@ export type NavLink = {
   href: string;
 };
 
+export type CategoryShowcaseItem = {
+  name: ProductCategory;
+  queryParam: string;
+  image: string;
+  subtitle: string;
+};
+
 export type CartItem = {
   productId: number;
   selectedColor: ProductColor;

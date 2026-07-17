@@ -41,7 +41,7 @@ Please follow the below instructions to run this project in your machine:
 
 ## Live URL
 
-#### 🚀 Live Project URL: velour-sm.vercel.app
+#### 🚀 Live Project URL: https://velour-sm.vercel.app
 
 ## Project Dependencies
 

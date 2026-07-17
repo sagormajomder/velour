@@ -41,7 +41,7 @@ export function FeaturedProducts() {
             <Button
               variant='outline'
               size='lg'
-              className='group relative rounded-full px-8 py-3 text-sm font-semibold tracking-wide border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 active:scale-95 cursor-pointer shadow-xs hover:shadow-md'>
+              className='group relative rounded-full px-8 py-3 text-sm font-semibold tracking-wide border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 active:scale-95 cursor-pointer shadow-xs hover:shadow-md'>
               View All Products
               <span className='inline-block transform group-hover:translate-x-1 transition-transform duration-200 ml-1.5'>
                 &rarr;
